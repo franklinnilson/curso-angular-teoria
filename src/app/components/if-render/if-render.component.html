@@ -1,0 +1,14 @@
+<div class="divider">
+  <div *ngIf="canShow">
+    <p>Exibir o conteúdo</p>
+  </div>
+  <div *ngIf="!canShow">
+    <p>Esconder o se for falso</p>
+  </div>
+  <div *ngIf="name === 'John'; else nameNotFound">
+    <p>Exibe se o nome for John</p>
+  </div>
+  <ng-template #nameNotFound>
+    <p>Exibe se o nome não for John</p>
+  </ng-template>
+</div>
